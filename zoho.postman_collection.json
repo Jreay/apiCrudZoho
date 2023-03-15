@@ -1,0 +1,192 @@
+{
+	"info": {
+		"_postman_id": "a6d48243-99ac-4c63-9399-9ccd710a2350",
+		"name": "zoho",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19331582"
+	},
+	"item": [
+		{
+			"name": "listar",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://84d5-186-70-98-172.sa.ngrok.io/api/ApiPrueba/listarClientes",
+					"protocol": "https",
+					"host": [
+						"84d5-186-70-98-172",
+						"sa",
+						"ngrok",
+						"io"
+					],
+					"path": [
+						"api",
+						"ApiPrueba",
+						"listarClientes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ListaLocal",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5001/api/ApiPrueba/listarClientes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"ApiPrueba",
+						"listarClientes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "InsertarLocal",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nombre\": \"josue\",\r\n  \"apellido\": \"rea\",\r\n  \"direccion\": \"guasmo\",\r\n  \"telefono\": \"0978845448\",\r\n  \"estado\": \"activo\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5001/api/ApiPrueba/registrarCliente",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"ApiPrueba",
+						"registrarCliente"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Insertar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nombre\": \"juan\",\r\n  \"apellido\": \"perez\",\r\n  \"direccion\": \"norte\",\r\n  \"telefono\": \"0978845355\",\r\n  \"estado\": \"activo\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://84d5-186-70-98-172.sa.ngrok.io/api/ApiPrueba/registrarCliente",
+					"protocol": "https",
+					"host": [
+						"84d5-186-70-98-172",
+						"sa",
+						"ngrok",
+						"io"
+					],
+					"path": [
+						"api",
+						"ApiPrueba",
+						"registrarCliente"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "smshozo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"api_key\":\"e2a7e624ed704bd884eac4cec68271b5\",\r\n    \"report_url\":\"http://yourserver.com/callback/script\",\r\n    \"concat\":1,\r\n    \"messages\":[\r\n        {\r\n            \"from\":\"Hozo CRM\",\r\n            \"to\":\"593978845448\",\r\n            \"text\":\"Hozo CRM, informa que su cuenta a sido creada con exito\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.gateway360.com/api/3.0/sms/send",
+					"protocol": "https",
+					"host": [
+						"api",
+						"gateway360",
+						"com"
+					],
+					"path": [
+						"api",
+						"3.0",
+						"sms",
+						"send"
+					],
+					"query": [
+						{
+							"key": "api_key",
+							"value": "e2a7e624ed704bd884eac4cec68271b5",
+							"disabled": true
+						},
+						{
+							"key": "from",
+							"value": "34666666111",
+							"disabled": true
+						},
+						{
+							"key": "to",
+							"value": "593978845448",
+							"disabled": true
+						},
+						{
+							"key": "text",
+							"value": "hola ",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "WASA",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://graph.facebook.com/{{Version}}/{{Phone-Number-ID}}/messages",
+					"protocol": "https",
+					"host": [
+						"graph",
+						"facebook",
+						"com"
+					],
+					"path": [
+						"{{Version}}",
+						"{{Phone-Number-ID}}",
+						"messages"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
